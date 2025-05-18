@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import { Product } from '../../interfaces/product';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-list-products',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './list-products.component.html',
   styleUrl: './list-products.component.css'
 })
