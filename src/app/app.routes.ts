@@ -6,6 +6,7 @@ import { TestComponent } from './components/test/test.component';
 export const routes: Routes = [
   { path: 'inicio', component: ListProductsComponent },
   { path: 'agregar', component: AddEditProductsComponent },
+  { path: 'editar/:id', component: AddEditProductsComponent},
   { path: 'test', component: TestComponent},
   { path: '**', redirectTo: 'inicio', pathMatch: 'full' }, // Redirige a listaproductos si no se encuentra la ruta
 ];

@@ -1,1 +1,22 @@
-<p>add-edit-products works!</p>
+<div class="flex justify-center mt-16">
+  <form [formGroup]="form" (ngSubmit)="addProduct()" class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+    <legend class="fieldset-legend">AGREGAR PRODUCTO</legend>
+
+    <label class="label">Nombre</label>
+    <input formControlName="name" type="text" class="input" placeholder="Nombre" />
+
+    <label class="label">Ingrese Descripcion</label>
+    <input formControlName="description" type="text" class="input" placeholder="Descripcion" />
+
+    <label class="label">Ingrese Precio</label>
+    <input formControlName="price" type="number" class="input" placeholder="Precio" />
+
+    <label class="label">Ingrese Stock</label>
+    <input formControlName="stock" type="number" class="input" placeholder="Stock" />
+
+    <button [disabled]="form.invalid"  type="submit" class="btn btn-neutral mt-4">Agregar Producto</button>
+    <button routerLink="/" class="btn btn-soft">Volver</button>
+
+  </form>
+
+</div>

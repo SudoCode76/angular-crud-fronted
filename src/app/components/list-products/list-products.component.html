@@ -18,13 +18,13 @@
       </thead>
       <tbody>
         <!-- row 1 -->
-        <tr *ngFor="let products of listProducts">
-            <td>{{ products.id }}</td>
-            <td>{{ products.name }}</td>
-            <td>{{ products.description }}</td>
-            <td>{{ products.price }}</td>
+        <tr *ngFor="let product of listProducts">
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.price }}</td>
             <td>
-              <button class="btn btn-soft btn-warning mr-2">Editar</button>
+              <button [routerLink]="['/editar', product.id]"  class="btn btn-soft btn-warning mr-2">Editar</button>
               <button class="btn btn-soft btn-error">Elminar</button>
             </td>
         </tr>
