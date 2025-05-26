@@ -23,6 +23,7 @@
             <td>{{ product.name }}</td>
             <td>{{ product.description }}</td>
             <td>{{ product.price }}</td>
+            <td>{{ product.stock}}</td>
             <td>
               <button [routerLink]="['/editar', product.id]"  class="btn btn-soft btn-warning mr-2">Editar</button>
               <button class="btn btn-soft btn-error">Elminar</button>
