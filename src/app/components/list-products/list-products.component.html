@@ -1,4 +1,6 @@
-<div class="container mx-auto">
+<app-progress-bar *ngIf="loading"></app-progress-bar>
+
+<div *ngIf="!loading" class="container mx-auto">
     <h4>Listado de productos</h4>
     <button class="btn btn-soft btn-success ml-auto block" routerLink="/agregar">Agregar Producto</button>
 
@@ -22,11 +24,11 @@
             <td>{{ product.id }}</td>
             <td>{{ product.name }}</td>
             <td>{{ product.description }}</td>
-            <td>{{ product.price }}</td>
+            <td>{{ product.price | currency }}</td>
             <td>{{ product.stock}}</td>
             <td>
               <button [routerLink]="['/editar', product.id]"  class="btn btn-soft btn-warning mr-2">Editar</button>
-              <button class="btn btn-soft btn-error">Elminar</button>
+              <button (click)="deleteProduct(product.id!)" class="btn btn-soft btn-error">Elminar</button>
             </td>
         </tr>
       </tbody>
