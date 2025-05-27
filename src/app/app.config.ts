@@ -18,7 +18,12 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(withEventReplay()),
     provideHttpClient(withFetch()),
     provideAnimations(), // required animations providers
-    provideToastr(), // Toastr providers
+    provideToastr(
+      {
+        timeOut: 1000,
+        positionClass: 'toast-bottom-right',
+      }
+    ), // Toastr providers
 
   ]
 };

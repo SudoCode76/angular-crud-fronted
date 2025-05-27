@@ -1,6 +1,8 @@
-<div class="flex justify-center mt-16">
+<app-progress-bar *ngIf="loading"></app-progress-bar>
+
+<div *ngIf="!loading" class="flex justify-center mt-16">
   <form [formGroup]="form" (ngSubmit)="addProduct()" class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-    <legend class="fieldset-legend">AGREGAR PRODUCTO</legend>
+    <legend class="fieldset-legend">{{ operacion }}</legend>
 
     <label class="label">Nombre</label>
     <input formControlName="name" type="text" class="input" placeholder="Nombre" />
